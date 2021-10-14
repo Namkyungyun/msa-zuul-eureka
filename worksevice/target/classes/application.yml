@@ -1,0 +1,23 @@
+server:
+  port: ${random.int[3000,3999]}
+
+spring:
+  application:
+    name: workservice
+  profiles:
+    active: dev
+  config:
+    import: optional:configserver:http://localhost:9999
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

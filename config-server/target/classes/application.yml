@@ -1,0 +1,16 @@
+server:
+  port: 9999
+
+spring:
+  profiles:
+    active: composite
+  cloud:
+    config:
+      server:
+        composite:
+        -
+          type: git
+          uri: https://github.com/Namkyungyun/config-repo-test.git
+        -
+          type: git
+          uri: https://github.com/Namkyungyun/config-repo-check.git

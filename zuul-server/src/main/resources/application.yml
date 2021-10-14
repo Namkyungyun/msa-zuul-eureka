@@ -1,0 +1,55 @@
+server:
+  port: 5555
+
+spring:
+  application:
+    name: zuulservice
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:9999
+
+#ribbon:
+#  ConnectTimeout: 30000
+#  ReadTimeout: 30000
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 30000
+
+eureka:
+  instance:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.thoughtmechanix: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: routes, refresh
+
+
+zuul:
+  ignored-services: memberservice, workservice
+  prefix: /api
+  routes:
+    memberservice: /my-member/**
+    workservice: /my-work/**
+#  host:
+#    connect-timeout-millis: 30000
+#    socket-timeout-millis: 60000
+#  semaphore:
+#    max-semaphores: 500
+#    sensitive-headers: true

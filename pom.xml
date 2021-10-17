@@ -14,7 +14,7 @@
         <module>eureka-server</module>
         <module>memberservice</module>
         <module>worksevice</module>
-        <module>eureka-server-2</module>
+        <module>eureka-server2</module>
 
     </modules>
 

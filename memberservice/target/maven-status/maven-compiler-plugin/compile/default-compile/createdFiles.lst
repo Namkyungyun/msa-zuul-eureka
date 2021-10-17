@@ -1,2 +1,3 @@
 com\namkyung\memberservice\MemberServiceApplication.class
 com\namkyung\memberservice\controller\MemberServiceController.class
+com\namkyung\memberservice\config\WebServerFacotryCustomizerConfiguration.class

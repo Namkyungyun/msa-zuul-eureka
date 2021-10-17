@@ -11,7 +11,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-
+@RefreshScope
+@Configuration
 public class PreFilter extends ZuulFilter {
 
 
@@ -20,13 +21,6 @@ public class PreFilter extends ZuulFilter {
 
     private String Filter_Type = "pre";
     private int Filter_Order = 1;
-
-    public PreFilter preFilter(){
-        this.shouldVal = shouldVal;
-
-        return preFilter();
-
-    }
 
 
     @Override
@@ -40,7 +34,6 @@ public class PreFilter extends ZuulFilter {
     }
 
     @Override
-    @RefreshScope
     public boolean shouldFilter() {
         return shouldVal;
     }

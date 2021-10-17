@@ -3,14 +3,16 @@ server:
 
 spring:
   application:
-    name: eureka-server2
+    name: eureka-server1
 
 
 eureka:
   instance:
-    hostname: eureka-server2
+    hostname: eureka-server1
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka-server1:8762/eureka/
+      defaultZone: http://localhost:8762/eureka/
+
+

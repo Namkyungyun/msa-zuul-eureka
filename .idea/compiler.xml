@@ -3,12 +3,14 @@
   <component name="CompilerConfiguration">
     <option name="BUILD_PROCESS_HEAP_SIZE" value="2000" />
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="zuul-server" />
         <module name="config-server" />
+        <module name="eureka-server2" />
         <module name="worksevice" />
         <module name="eureka-server" />
         <module name="memberservice" />
@@ -26,6 +28,7 @@
       <module name="config-server" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="eureka-server-2" options="-parameters" />
+      <module name="eureka-server2" options="-parameters" />
       <module name="memberservice" options="-parameters" />
       <module name="worksevice" options="-parameters" />
       <module name="zuul-server" options="-parameters" />

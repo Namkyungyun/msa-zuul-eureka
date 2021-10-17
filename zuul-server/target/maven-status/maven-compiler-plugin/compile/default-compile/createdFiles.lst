@@ -1,4 +1,4 @@
-com\namkyung\zuul\server\RouteFilter.class
 com\namkyung\zuul\server\ZuulServerApplication.class
-com\namkyung\zuul\server\PreFilter.class
-com\namkyung\zuul\server\PostFilter.class
+com\namkyung\zuul\server\filter\PostFilter.class
+com\namkyung\zuul\server\filter\PreFilter.class
+com\namkyung\zuul\server\filter\RouteFilter.class

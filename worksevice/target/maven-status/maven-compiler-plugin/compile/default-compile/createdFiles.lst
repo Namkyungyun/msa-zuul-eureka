@@ -1,2 +1,3 @@
 com\namkyung\workservice\WorkServiceApplication.class
 com\namkyung\workservice\controller\WorkServiceController.class
+com\namkyung\workservice\config\WebServerFacotryCustomizerConfiguration.class
